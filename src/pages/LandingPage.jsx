@@ -126,9 +126,18 @@ const LandingPage = () => {
                         textDecoration: 'none',
                         fontWeight: 500,
                         fontSize: '0.95rem',
-                        transition: 'color 0.2s',
-                        display: isMobile ? 'none' : 'block'
-                    }}>
+                        transition: 'all 0.2s ease',
+                        display: isMobile ? 'none' : 'inline-block'
+                    }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.color = '#171717';
+                            e.currentTarget.style.transform = 'scale(1.05)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.color = '#525252';
+                            e.currentTarget.style.transform = 'scale(1)';
+                        }}
+                    >
                         Log In
                     </Link>
                     <Link to="/login" style={{
@@ -141,7 +150,10 @@ const LandingPage = () => {
                         fontSize: '0.95rem',
                         transition: 'transform 0.2s',
                         display: 'inline-block'
-                    }}>
+                    }}
+                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                    >
                         Get Started
                     </Link>
                 </div>
@@ -196,7 +208,10 @@ const LandingPage = () => {
                             alignItems: 'center',
                             gap: '0.5rem',
                             transition: 'all 0.3s ease'
-                        }}>
+                        }}
+                            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                        >
                             Start for Free <ArrowRight size={20} />
                         </Link>
                     </div>
@@ -429,7 +444,10 @@ const LandingPage = () => {
                         fontSize: '1.125rem',
                         display: 'inline-block',
                         transition: 'transform 0.2s'
-                    }}>
+                    }}
+                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                    >
                         Get Started
                     </Link>
                 </div>
