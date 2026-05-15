@@ -146,8 +146,12 @@ const Layout = ({ children }) => {
                         border: isSidebarOpen ? (isDarkMode ? '1px solid #404040' : '1px solid #F5F5F5') : 'none'
                     }}>
                         <img
-                            src={user.avatar || 'https://ui-avatars.com/api/?name=User&background=random'}
-                            alt={user.name}
+                            src={user.avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name || user.email || 'User')}&background=random`}
+                            alt={user.name || 'User'}
+                            onError={(e) => {
+                                e.currentTarget.onerror = null;
+                                e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name || user.email || 'User')}&background=random`;
+                            }}
                             style={{
                                 width: '36px',
                                 height: '36px',
