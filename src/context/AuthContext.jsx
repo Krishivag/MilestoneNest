@@ -25,7 +25,8 @@ export const AuthProvider = ({ children }) => {
     // Sync user with backend
     const syncWithBackend = async (firebaseUser) => {
         try {
-            const response = await fetch('http://localhost:5000/api/auth/sync', {
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const response = await fetch(`${apiUrl}/api/auth/sync`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -31,7 +31,8 @@ const TaskColumn = ({ id, title, tasks, onEditTask }) => {
 
         // Send email notification
         try {
-            const response = await fetch('http://localhost:5000/api/notifications/send', {
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+            const response = await fetch(`${apiUrl}/api/notifications/send`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
