@@ -40,7 +40,7 @@ Before you begin, ensure you have the following installed:
 - [MongoDB](https://www.mongodb.com/) (Local instance or Atlas URI)
 - [Git](https://git-scm.com/)
 
-## ⚡ Getting Started
+## Getting Started
 
 Follow these instructions to set up the project locally.
                                                                 
