@@ -35,7 +35,7 @@ Milestonenest is a comprehensive project management application designed to stre
 
 ## 📋 Prerequisites
 
-Before you begin, ensure you have the following installed:
+Before you begin, ensure that you have the following installed:
 - [Node.js](https://nodejs.org/) (v18 or higher)
 - [MongoDB](https://www.mongodb.com/) (Local instance or Atlas URI)
 - [Git](https://git-scm.com/)
